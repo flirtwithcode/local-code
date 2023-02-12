@@ -1,0 +1,32 @@
+<!-- <kendo-splitter orientatin="vertical" style="height:800px;" >
+  <kendo-splitter-pane>
+    <kendo-splitter>
+      <kendo-splitter-pane [collapsible]="true" size="20%">
+         <div class="pane-content">
+            <app-search></app-search>
+        </div>    
+      </kendo-splitter-pane>
+    </kendo-splitter>
+    <kendo-splitter>
+      <kendo-splitter-pane>
+        <div class="pane-content">
+          <app-toolbar></app-toolbar>
+          <app-grid></app-grid>
+        </div>         
+      </kendo-splitter-pane>
+    </kendo-splitter>
+  </kendo-splitter-pane>
+</kendo-splitter> -->
+<kendo-splitter >
+  <kendo-splitter-pane [collapsible]="true" size="20%">
+    <div class="pane-content">
+      <app-search></app-search>
+    </div>     
+  </kendo-splitter-pane>
+
+  <kendo-splitter-pane>
+    <app-toolbar></app-toolbar>
+    <app-grid></app-grid>
+  </kendo-splitter-pane>
+</kendo-splitter>
+

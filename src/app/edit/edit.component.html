@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit Popup</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<ag-grid-angular
+    style="height: 200px"
+    class="ag-theme-balham"
+    [columnDefs]="colDefs"
+    [defaultColDef]="defaultColDef"
+    [rowSelection]="'single'"
+    [rowData]="rowData"
+    [rowSelection]="'multiple'"
+    [animateRows]="true"
+    [paginationAutoPageSize]="true"
+    [pagination]="true"
+  ></ag-grid-angular>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
