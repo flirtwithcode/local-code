@@ -25,6 +25,6 @@ export class AgGridService {
    }
 
    clearAction(){
-    this.actionType.next();
+    this.actionType.next(null);
    }
 }

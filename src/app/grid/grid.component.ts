@@ -70,6 +70,7 @@ export class GridComponent implements OnInit {
    if(this.gridApi.getSelectedRows().length > 0){ 
     const modalRef = this.modalService.open(EditComponent);
        modalRef.componentInstance.editData = this.gridApi.getSelectedRows();
+       
       }else {
         
           const modalRef = this.modalService.open(ErrorModalComponent);

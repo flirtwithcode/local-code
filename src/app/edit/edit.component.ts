@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ColDef } from 'ag-grid-community';
+import { RemoveComponent } from '../remove/remove.component';
 
 @Component({
   selector: 'app-edit',
@@ -12,7 +13,11 @@ export class EditComponent implements OnInit {
   
 
   colDefs: ColDef[] = [
-    { field: 'make',headerCheckboxSelection: true,checkboxSelection:true},
+    { field: 'action',
+    headerName: "Action 3",
+    cellRendererFramework : RemoveComponent,
+    cellRendererParams: { context: this },},
+    { field: 'make',},
     { field: 'model'},
     { field: 'price' }
   ];
