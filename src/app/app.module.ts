@@ -41,6 +41,12 @@ import { ErrorModalComponent } from './error-modal/error-modal.component';
     RemoveComponent,
     UploadComponent,
     ErrorModalComponent
+  ],
+  entryComponents: [
+    EditComponent,
+    UploadComponent,
+    RemoveComponent,
+    ErrorModalComponent,
   ],  
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
