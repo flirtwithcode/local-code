@@ -3,6 +3,9 @@
     <button type="button" class="close" aria-label="Close" (click)="close()">
       <span aria-hidden="true">&times;</span>
     </button>
+    <button (click)="remove()">
+        remove
+    </button>
   </div>
 <ag-grid-angular
     style="height: 200px"
@@ -15,7 +18,8 @@
     [animateRows]="true"
     [paginationAutoPageSize]="true"
     [pagination]="true"
+    (gridReady)="onGridReady($event)"
   ></ag-grid-angular>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-outline-dark" (click)="submit()">Submit</button>
   </div>

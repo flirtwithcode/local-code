@@ -9,10 +9,12 @@ import { IAfterGuiAttachedParams, ICellRendererComp, ICellRendererParams, Promis
 })
 export class RemoveComponent implements ICellRendererAngularComp  {
   rowData: any;
+  params: ICellRendererParams;
+  console: any;
 
   constructor() { }
   refresh(params: any): boolean {
-    return false;
+    return true;
   }
   // getGui(): HTMLElement {
   //  return `<button>`
@@ -23,12 +25,15 @@ export class RemoveComponent implements ICellRendererAngularComp  {
   afterGuiAttached?(params?: IAfterGuiAttachedParams): void {
     throw new Error('Method not implemented.');
   }
-  agInit(params: ICellRendererParams): void | Promise<void> {
+  agInit(params: ICellRendererParams): void | Promise<void> {    
     this.rowData = params.data;
+    this.params = params;
   }
 
   remove(){
-    console.log(this.rowData , "Remove clicked");
+    this.params
+    this.params.context.removeRow(this.rowData);
+    console.log(this.rowData , "Remove clicked" , this.params);
   }
 
   ngOnInit() {
